@@ -1,0 +1,62 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Grilled Chicken Caesar Salad",
+    "Description": "Crispy romaine lettuce, grilled chicken, and Caesar dressing topped with parmesan and croutons.",
+    "Price": 12.99
+  },
+  {
+    "Id": 2,
+    "Name": "Margherita Pizza",
+    "Description": "Classic pizza topped with fresh mozzarella, tomatoes, and basil on a thin crust.",
+    "Price": 10.50
+  },
+  {
+    "Id": 3,
+    "Name": "Beef Burger",
+    "Description": "Juicy beef patty with lettuce, tomato, pickles, and cheddar cheese on a toasted bun.",
+    "Price": 9.75
+  },
+  {
+    "Id": 4,
+    "Name": "Spaghetti Carbonara",
+    "Description": "Creamy pasta with pancetta, egg, and parmesan, garnished with parsley.",
+    "Price": 13.45
+  },
+  {
+    "Id": 5,
+    "Name": "Vegan Buddha Bowl",
+    "Description": "A nutritious mix of quinoa, chickpeas, avocado, and roasted vegetables with a tahini dressing.",
+    "Price": 11.25
+  },
+  {
+    "Id": 6,
+    "Name": "Chicken Tikka Masala",
+    "Description": "Tender chicken in a spiced tomato-based sauce served with basmati rice and naan.",
+    "Price": 14.00
+  },
+  {
+    "Id": 7,
+    "Name": "Fish and Chips",
+    "Description": "Crispy battered fish served with golden fries and tartar sauce.",
+    "Price": 12.50
+  },
+  {
+    "Id": 8,
+    "Name": "Vegetarian Sushi Platter",
+    "Description": "Assorted vegetable sushi rolls with soy sauce, wasabi, and pickled ginger.",
+    "Price": 15.00
+  },
+  {
+    "Id": 9,
+    "Name": "BBQ Ribs",
+    "Description": "Slow-cooked ribs smothered in tangy barbecue sauce, served with coleslaw.",
+    "Price": 17.95
+  },
+  {
+    "Id": 10,
+    "Name": "Greek Salad",
+    "Description": "A refreshing mix of cucumbers, tomatoes, olives, feta cheese, and red onions with a lemon-oregano dressing.",
+    "Price": 8.75
+  }
+]

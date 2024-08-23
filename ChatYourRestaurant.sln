@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatYourRestaurant.UI", "ChatYourRestaurant.UI\ChatYourRestaurant.UI.csproj", "{90FB07A1-1A6F-4936-B921-56E32076E05E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatYourRestaurant.Domain.DI", "ChatYourRestaurant.Domain.DI\ChatYourRestaurant.Domain.DI.csproj", "{D3D7A6BC-C98C-4421-85C9-397A1F7781BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatYourRestaurant.Domain.Common", "ChatYourRestaurant.Domain.Common\ChatYourRestaurant.Domain.Common.csproj", "{ED2EAD3D-89C5-4726-AAE9-D0F6907BE0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatYourRestaurant.DataAccess", "ChatYourRestaurant.DataAccess\ChatYourRestaurant.DataAccess.csproj", "{DE701800-282C-425E-9755-AED2A63B7BD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90FB07A1-1A6F-4936-B921-56E32076E05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FB07A1-1A6F-4936-B921-56E32076E05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FB07A1-1A6F-4936-B921-56E32076E05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FB07A1-1A6F-4936-B921-56E32076E05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3D7A6BC-C98C-4421-85C9-397A1F7781BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D7A6BC-C98C-4421-85C9-397A1F7781BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D7A6BC-C98C-4421-85C9-397A1F7781BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D7A6BC-C98C-4421-85C9-397A1F7781BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED2EAD3D-89C5-4726-AAE9-D0F6907BE0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED2EAD3D-89C5-4726-AAE9-D0F6907BE0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED2EAD3D-89C5-4726-AAE9-D0F6907BE0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED2EAD3D-89C5-4726-AAE9-D0F6907BE0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE701800-282C-425E-9755-AED2A63B7BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE701800-282C-425E-9755-AED2A63B7BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE701800-282C-425E-9755-AED2A63B7BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE701800-282C-425E-9755-AED2A63B7BD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

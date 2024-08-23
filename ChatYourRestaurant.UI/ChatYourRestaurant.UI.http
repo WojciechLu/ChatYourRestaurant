@@ -1,0 +1,8 @@
+< {%
+    request.variables.set("apiUrl", "http://localhost:5017")
+%}
+
+GET {{apiUrl}}/weatherforecast/
+Accept: application/json
+
+###
