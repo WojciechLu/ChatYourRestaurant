@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
-using ChatYourRestaurant.Domain.Models;
+using ChatYourRestaurant.Domain.Common.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
-namespace ChatYourRestaurant.DataAccess;
+namespace ChatYourRestaurant.DataAccess.Seeder;
 
 public class DbInitializer
 {

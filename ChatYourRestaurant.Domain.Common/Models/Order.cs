@@ -1,8 +1,7 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using ChatYourRestaurant.Domain.Common.Enums;
 
-namespace ChatYourRestaurant.Domain.Models
+namespace ChatYourRestaurant.Domain.Common.Models
 {
     public class Order
     {

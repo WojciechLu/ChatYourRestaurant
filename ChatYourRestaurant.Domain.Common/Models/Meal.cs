@@ -1,4 +1,4 @@
-﻿namespace ChatYourRestaurant.Domain.Models
+﻿namespace ChatYourRestaurant.Domain.Common.Models
 {
     public class Meal
     {

@@ -1,4 +1,6 @@
+using ChatYourRestaurant.Application.ChatBot;
 using ChatYourRestaurant.Domain.DI;
+using ChatYourRestaurant.UI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDependency(builder.Configuration);
+builder.Services.AddHttpClient().AddControllers();
+builder.Services.SetUpBotModule();
 
 var app = builder.Build();
 
@@ -17,7 +21,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 var summaries = new[]
 {
@@ -38,6 +42,15 @@ app.MapGet("/weatherforecast", () =>
     })
     .WithName("GetWeatherForecast")
     .WithOpenApi();
+
+app.UseDefaultFiles()
+    .UseStaticFiles()
+    .UseWebSockets()
+    .UseRouting()
+    .UseEndpoints(endpoints =>
+    {
+        endpoints.MapControllers();
+    });
 
 app.Run();
 

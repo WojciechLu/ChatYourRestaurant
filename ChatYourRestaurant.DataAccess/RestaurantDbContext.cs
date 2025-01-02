@@ -1,4 +1,5 @@
-﻿using ChatYourRestaurant.Domain.Models;
+﻿using ChatYourRestaurant.DataAccess.Seeder;
+using ChatYourRestaurant.Domain.Common.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChatYourRestaurant.DataAccess;
