@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatYourRestaurant.Application.ChatBot", "ChatYourRestaurant.Application.ChatBot\ChatYourRestaurant.Application.ChatBot.csproj", "{6F0D2396-F3C5-4B93-B613-41A9D355A2FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatYourRestaurant.Domain.Service", "ChatYourRestaurant.Domain.Service\ChatYourRestaurant.Domain.Service.csproj", "{E52A9761-F47B-46F7-8CCD-05386A0299FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{6F0D2396-F3C5-4B93-B613-41A9D355A2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F0D2396-F3C5-4B93-B613-41A9D355A2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F0D2396-F3C5-4B93-B613-41A9D355A2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E52A9761-F47B-46F7-8CCD-05386A0299FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E52A9761-F47B-46F7-8CCD-05386A0299FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E52A9761-F47B-46F7-8CCD-05386A0299FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E52A9761-F47B-46F7-8CCD-05386A0299FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{90FB07A1-1A6F-4936-B921-56E32076E05E} = {643D979D-A952-4A1D-AF0C-B4D819AECA4A}
@@ -51,5 +57,6 @@ Global
 		{D3D7A6BC-C98C-4421-85C9-397A1F7781BA} = {2A14C19D-E749-4242-9AA8-36078A8DBB9C}
 		{DE701800-282C-425E-9755-AED2A63B7BD9} = {78A18015-EA17-4E10-B9D4-0796449C2E95}
 		{6F0D2396-F3C5-4B93-B613-41A9D355A2FD} = {75A74F8C-AF6D-48C9-808F-9D7B12783742}
+		{E52A9761-F47B-46F7-8CCD-05386A0299FE} = {2A14C19D-E749-4242-9AA8-36078A8DBB9C}
 	EndGlobalSection
 EndGlobal

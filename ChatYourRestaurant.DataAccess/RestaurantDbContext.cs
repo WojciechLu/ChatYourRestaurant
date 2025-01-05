@@ -11,8 +11,8 @@ public class RestaurantDbContext: DbContext
         
     }
         
-    public DbSet<Order> Orders { get; set; }
-    public DbSet<Meal> Meals { get; set; }
+    public required DbSet<Order> Orders { get; set; }
+    public required DbSet<Meal> Meals { get; set; }
     
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -7,7 +7,7 @@ namespace ChatYourRestaurant.Domain.Common.Models
     {
         [Key]
         public Guid Oder { get; set; }
-        public Meal Meal { get; set; }
+        public required List<MealQuantity> MealQuantities { get; set; }
         public OrderStatus Status { get; set; }
     }
 }

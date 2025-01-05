@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ChatYourRestaurant.DataAccess\ChatYourRestaurant.DataAccess.csproj" />
+      <ProjectReference Include="..\ChatYourRestaurant.Domain.Common\ChatYourRestaurant.Domain.Common.csproj" />
+    </ItemGroup>
+
+</Project>
