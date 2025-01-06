@@ -17,6 +17,21 @@ public class RestaurantDbContext: DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<MealQuantity>()
+            .HasOne(mq => mq.Meal)
+            .WithMany()
+            .HasForeignKey(mq => mq.MealId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<MealQuantity>()
+            .HasOne(mq => mq.Order)
+            .WithMany(o => o.MealQuantities)
+            .HasForeignKey(mq => mq.OrderId)
+            .OnDelete(DeleteBehavior.Restrict);
+        
+        modelBuilder.Entity<MealQuantity>()
+            .HasKey(nameof(MealQuantity.MealId), nameof(MealQuantity.OrderId));
+        
         base.OnModelCreating(modelBuilder);
         new DbInitializer(modelBuilder).Seed();
     }

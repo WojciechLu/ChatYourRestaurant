@@ -2,6 +2,7 @@ using ChatYourRestaurant.Application.ChatBot;
 using ChatYourRestaurant.Domain.DI;
 using ChatYourRestaurant.UI;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,6 +12,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDependency(builder.Configuration);
 builder.Services.AddHttpClient().AddControllers();
 builder.Services.SetUpBotModule();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(MyAllowSpecificOrigins,
+        builder => builder.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
 
 var app = builder.Build();
 
@@ -20,6 +28,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(MyAllowSpecificOrigins);
 
 // app.UseHttpsRedirection();
 

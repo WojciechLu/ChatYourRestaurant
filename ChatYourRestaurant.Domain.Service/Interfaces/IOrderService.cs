@@ -1,8 +1,9 @@
-﻿using ChatYourRestaurant.Domain.Common.Models;
+﻿using ChatYourRestaurant.Domain.Common.Dtos;
+using ChatYourRestaurant.Domain.Common.Models;
 
 namespace ChatYourRestaurant.Domain.Service.Interfaces;
 
 public interface IOrderService
 {
-    Order MakeOrder(List<MealQuantity> mealQuantities);
+    Order MakeOrder(List<MealQuantityDto> mealQuantities);
 }

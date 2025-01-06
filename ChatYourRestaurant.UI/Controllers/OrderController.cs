@@ -1,4 +1,5 @@
-﻿using ChatYourRestaurant.Domain.Common.Models;
+﻿using ChatYourRestaurant.Domain.Common.Dtos;
+using ChatYourRestaurant.Domain.Common.Models;
 using ChatYourRestaurant.Domain.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,7 +11,7 @@ public class OrderController(IOrderService orderService) : ControllerBase
 {
     
     [HttpPost]
-    public IActionResult MakeOrder(List<MealQuantity> mealQuantities)
+    public IActionResult MakeOrder(List<MealQuantityDto> mealQuantities)
     {
         return Ok(orderService.MakeOrder(mealQuantities));
     }

@@ -5,19 +5,19 @@ namespace ChatYourRestaurant.DataAccess.Repositories;
 
 public interface IOrderRepository
 {
-    Order MakeOrder(List<MealQuantity> mealQuantities);
+    Order MakeOrder(Order order);
 }
 
 public class OrderRepository(RestaurantDbContext context): IOrderRepository
 {
-    public Order MakeOrder(List<MealQuantity> mealQuantities)
+    public Order MakeOrder(Order order)
     {
-        var order = new Order
-        {
-            Oder = default,
-            MealQuantities = mealQuantities,
-            Status = OrderStatus.InProgress
-        };
+        // var order = new Order
+        // {
+        //     Oder = Guid.NewGuid(),
+        //     MealQuantities = mealQuantities,
+        //     Status = OrderStatus.InProgress
+        // };
         context.Orders.Add(order);
         context.SaveChanges();
         return order;
