@@ -13,6 +13,8 @@ public class RestaurantDbContext: DbContext
         
     public required DbSet<Order> Orders { get; set; }
     public required DbSet<Meal> Meals { get; set; }
+    public required DbSet<Ingredient> Ingredients { get; set; }
+    public required DbSet<IngredientMeal> IngredientMeals { get; set; }
     
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,8 +33,20 @@ public class RestaurantDbContext: DbContext
         
         modelBuilder.Entity<MealQuantity>()
             .HasKey(nameof(MealQuantity.MealId), nameof(MealQuantity.OrderId));
+
+        modelBuilder.Entity<Meal>()
+            .HasMany(m => m.Ingredients)
+            .WithMany(i => i.UsedInMeals)
+            .UsingEntity<IngredientMeal>(
+                j => j.HasOne<Ingredient>().WithMany().HasForeignKey(x => x.IngredientId),
+                j => j.HasOne<Meal>().WithMany().HasForeignKey(x => x.MealId),
+                j =>
+                {
+                    j.HasKey(x => new { x.IngredientId, x.MealId });
+                    j.ToTable("IngredientMeal");
+                });
         
         base.OnModelCreating(modelBuilder);
-        new DbInitializer(modelBuilder).Seed();
+        DbInitializer.Seed(modelBuilder);
     }
 }

@@ -3,60 +3,127 @@
     "Id": 1,
     "Name": "Grilled Chicken Caesar Salad",
     "Description": "Crispy romaine lettuce, grilled chicken, and Caesar dressing topped with parmesan and croutons.",
+    "Ingredients": [
+      { "Id": 1, "Name": "Lettuce" },
+      { "Id": 2, "Name": "Chicken" },
+      { "Id": 3, "Name": "Caesar Dressing" },
+      { "Id": 4, "Name": "Parmesan" },
+      { "Id": 5, "Name": "Croutons" }
+    ],
     "Price": 12.99
   },
   {
     "Id": 2,
     "Name": "Margherita Pizza",
     "Description": "Classic pizza topped with fresh mozzarella, tomatoes, and basil on a thin crust.",
+    "Ingredients": [
+      { "Id": 6, "Name": "Mozzarella" },
+      { "Id": 7, "Name": "Tomato" },
+      { "Id": 8, "Name": "Basil" }
+    ],
     "Price": 10.50
   },
   {
     "Id": 3,
     "Name": "Beef Burger",
     "Description": "Juicy beef patty with lettuce, tomato, pickles, and cheddar cheese on a toasted bun.",
+    "Ingredients": [
+      { "Id": 9, "Name": "Beef Patty" },
+      { "Id": 1, "Name": "Lettuce" },
+      { "Id": 7, "Name": "Tomato" },
+      { "Id": 10, "Name": "Pickles" },
+      { "Id": 11, "Name": "Cheese" },
+      { "Id": 12, "Name": "Bun" }
+    ],
     "Price": 9.75
   },
   {
     "Id": 4,
     "Name": "Spaghetti Carbonara",
     "Description": "Creamy pasta with pancetta, egg, and parmesan, garnished with parsley.",
+    "Ingredients": [
+      { "Id": 13, "Name": "Pasta" },
+      { "Id": 14, "Name": "Pancetta" },
+      { "Id": 15, "Name": "Egg" },
+      { "Id": 16, "Name": "Parmesan" },
+      { "Id": 17, "Name": "Parsley" }
+    ],
     "Price": 13.45
   },
   {
     "Id": 5,
     "Name": "Vegan Buddha Bowl",
     "Description": "A nutritious mix of quinoa, chickpeas, avocado, and roasted vegetables with a tahini dressing.",
+    "Ingredients": [
+      { "Id": 18, "Name": "Quinoa" },
+      { "Id": 19, "Name": "Chickpeas" },
+      { "Id": 20, "Name": "Avocado" },
+      { "Id": 21, "Name": "Roasted Vegetables" },
+      { "Id": 22, "Name": "Tahini Dressing" }
+    ],
     "Price": 11.25
   },
   {
     "Id": 6,
     "Name": "Chicken Tikka Masala",
     "Description": "Tender chicken in a spiced tomato-based sauce served with basmati rice and naan.",
+    "Ingredients": [
+      { "Id": 23, "Name": "Chicken" },
+      { "Id": 24, "Name": "Tomato Sauce" },
+      { "Id": 25, "Name": "Rice" },
+      { "Id": 26, "Name": "Naan" }
+    ],
     "Price": 14.00
   },
   {
     "Id": 7,
     "Name": "Fish and Chips",
     "Description": "Crispy battered fish served with golden fries and tartar sauce.",
+    "Ingredients": [
+      { "Id": 27, "Name": "Fish" },
+      { "Id": 28, "Name": "Fries" },
+      { "Id": 29, "Name": "Tartar Sauce" }
+    ],
     "Price": 12.50
   },
   {
     "Id": 8,
     "Name": "Vegetarian Sushi Platter",
     "Description": "Assorted vegetable sushi rolls with soy sauce, wasabi, and pickled ginger.",
+    "Ingredients": [
+      { "Id": 30, "Name": "Cucumber" },
+      { "Id": 20, "Name": "Avocado" },
+      {"Id":  31, "Name": "Mango" },
+      { "Id": 32, "Name": "Soy Sauce" },
+      { "Id": 33, "Name": "Wasabi" },
+      { "Id": 34, "Name": "Ginger" }
+    ],
     "Price": 15.00
   },
   {
     "Id": 9,
     "Name": "BBQ Ribs",
     "Description": "Slow-cooked ribs smothered in tangy barbecue sauce, served with coleslaw.",
+    "Ingredients": [
+      { "Id": 35, "Name": "Ribs" },
+      { "Id": 36, "Name": "Barbecue Sauce" },
+      { "Id": 1, "Name": "Lettuce" },
+      { "Id": 37, "Name": "Carrots" }
+    ],
     "Price": 17.95
   },
   {
     "Id": 10,
     "Name": "Greek Salad",
     "Description": "A refreshing mix of cucumbers, tomatoes, olives, feta cheese, and red onions with a lemon-oregano dressing.",
+    "Ingredients": [
+      { "Id": 30, "Name": "Cucumber" },
+      { "Id": 7, "Name": "Tomato" },
+      { "Id": 38, "Name": "Olives" },
+      { "Id": 11, "Name": "Cheese" },
+      { "Id": 39, "Name": "Red Onions" },
+      { "Id": 40, "Name": "Lemon-Oregano Dressing" }
+    ],
     "Price": 8.75
   }
 ]
