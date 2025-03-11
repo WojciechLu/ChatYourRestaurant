@@ -1,11 +1,13 @@
-﻿using System.Text;
-using System.Text.Json;
+﻿using System.Net.Http.Json;
+using System.Text;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace ChatYourRestaurant.Application.ChatBot;
 
 public class LanguageServiceClient
 {
-    private readonly string _endpoint = "https://chatyourrestaurantlanguage.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2022-10-01-preview";
+    private readonly string _endpoint = "https://chatyourrestaurantlanguage.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2024-11-15-preview";
     private readonly string _apiKey = "B0bsMytKQYeIvFv9e3VCFg9Xu58eZFXwEmQMbHtGinpQbAImNtbAJQQJ99BAACYeBjFXJ3w3AAAaACOG3DPG";
     private readonly string _apimRequestId = "4ffcac1c-b2fc-48ba-bd6d-b69d9942995a";
 
@@ -15,7 +17,7 @@ public class LanguageServiceClient
     //     _apiKey = apiKey;
     // }
 
-    public async Task<string> AnalyzeTextAsync(string inputText, string activityId, string recipientId,
+    public async Task<ConversationResult> AnalyzeTextAsync(string inputText, string activityId, string recipientId,
         string projectName,
         string deploymentName)
     {
@@ -31,7 +33,7 @@ public class LanguageServiceClient
                 projectName,
                 deploymentName,
                 verbose=true,
-                stringIndexType = "TextElement_v8"
+                stringIndexType = "TextElement_V8"
             },
             analysisInput = new
             {
@@ -52,6 +54,6 @@ public class LanguageServiceClient
         
         var responseMessage = await response.Content.ReadAsStringAsync();
         response.EnsureSuccessStatusCode();
-        return await response.Content.ReadAsStringAsync();
+        return await response.Content.ReadFromJsonAsync<ConversationResult>();
     }
 }
