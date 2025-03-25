@@ -1,4 +1,5 @@
 using ChatYourRestaurant.Application.ChatBot;
+using ChatYourRestaurant.Domain.Common.Settings;
 using ChatYourRestaurant.Domain.DI;
 using ChatYourRestaurant.UI;
 
@@ -7,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+var section = builder.Configuration.GetSection("LanguageSettings");
+builder.Services.Configure<LanguageSettings>(section);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDependency(builder.Configuration);
