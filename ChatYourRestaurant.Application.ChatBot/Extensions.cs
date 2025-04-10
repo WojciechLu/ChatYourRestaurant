@@ -1,4 +1,5 @@
-﻿using ChatYourRestaurant.Domain.Common.Settings;
+﻿using ChatYourRestaurant.Application.ChatBot.Handler;
+using ChatYourRestaurant.Domain.Common.Settings;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Bot.Connector.Authentication;

@@ -6,7 +6,7 @@ using Microsoft.Bot.Builder.TraceExtensions;
 using Microsoft.Bot.Connector.Authentication;
 using Microsoft.Extensions.Logging;
 
-namespace ChatYourRestaurant.Application.ChatBot
+namespace ChatYourRestaurant.Application.ChatBot.Handler
 {
     public class AdapterWithErrorHandler : CloudAdapter
     {
