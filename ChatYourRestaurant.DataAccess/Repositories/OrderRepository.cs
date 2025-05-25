@@ -12,12 +12,6 @@ public class OrderRepository(RestaurantDbContext context): IOrderRepository
 {
     public Order MakeOrder(Order order)
     {
-        // var order = new Order
-        // {
-        //     Oder = Guid.NewGuid(),
-        //     MealQuantities = mealQuantities,
-        //     Status = OrderStatus.InProgress
-        // };
         context.Orders.Add(order);
         context.SaveChanges();
         return order;

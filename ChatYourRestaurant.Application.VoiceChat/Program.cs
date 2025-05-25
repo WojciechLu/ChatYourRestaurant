@@ -3,6 +3,7 @@ using ChatYourRestaurant.Application.ChatBot.Handler;
 using ChatYourRestaurant.DataAccess;
 using ChatYourRestaurant.DataAccess.Repositories;
 using ChatYourRestaurant.Domain.Common.Settings;
+using ChatYourRestaurant.Domain.Service.Interfaces;
 using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
 using Microsoft.EntityFrameworkCore;
@@ -39,7 +40,7 @@ internal static class Program
         var languageServiceClient = new LanguageServiceClient(languageSettings);
         
         var serviceProvider = services.BuildServiceProvider();
-        var intentHandler = new IntentHandler(serviceProvider.GetService<IMealRepository>());
+        var intentHandler = new IntentHandler(serviceProvider.GetService<IMealRepository>(), serviceProvider.GetService<IOrderService>());
 
         Console.WriteLine("Speak into your microphone.");
 

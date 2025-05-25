@@ -14,6 +14,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ChatYourRestaurant.DataAccess\ChatYourRestaurant.DataAccess.csproj" />
+      <ProjectReference Include="..\ChatYourRestaurant.Domain.Service\ChatYourRestaurant.Domain.Service.csproj" />
     </ItemGroup>
 
 </Project>

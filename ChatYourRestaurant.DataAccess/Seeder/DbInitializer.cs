@@ -9,7 +9,7 @@ public static class DbInitializer
 {
     public static void Seed(ModelBuilder modelBuilder)
     {
-        Console.WriteLine("Start seeding");
+        // Console.WriteLine("Start seeding");
         var assembly = Assembly.GetExecutingAssembly();
         var resourceName = "ChatYourRestaurant.DataAccess.seedData.json"; // Namespace + file name
 
@@ -18,7 +18,7 @@ public static class DbInitializer
         {
             var json = reader.ReadToEnd();
         
-            Console.WriteLine("Deserializing Meals");
+            // Console.WriteLine("Deserializing Meals");
             var seedMeals = JsonConvert.DeserializeObject<List<Meal>>(json);
 
             var ingredientMeals = seedMeals.SelectMany(meal => meal.Ingredients.Select(ingredient => new IngredientMeal
@@ -29,11 +29,11 @@ public static class DbInitializer
 
             var ingredients = seedMeals.SelectMany(meal => meal.Ingredients).DistinctBy(x => x.Id);
             
-            Console.WriteLine("Start ingredients seed");
+            // Console.WriteLine("Start ingredients seed");
             modelBuilder.Entity<Ingredient>().HasData(ingredients.ToArray());
-            Console.WriteLine("Succeed ingredients seed");
+            // Console.WriteLine("Succeed ingredients seed");
             
-            Console.WriteLine("Start meals seed");
+            // Console.WriteLine("Start meals seed");
             modelBuilder.Entity<Meal>().HasData(seedMeals.Select(meal => new Meal
             {
                 Id = meal.Id,
@@ -41,12 +41,11 @@ public static class DbInitializer
                 Description = meal.Description,
                 Price = meal.Price
             }));
-            Console.WriteLine("Succeed meals seed");
+            // Console.WriteLine("Succeed meals seed");
             
-            Console.WriteLine("Start ingredientMeals seed");
+            // Console.WriteLine("Start ingredientMeals seed");
             modelBuilder.Entity<IngredientMeal>().HasData(ingredientMeals);
-            Console.WriteLine("Succeed ingredientMeals seed");
-        
+            // Console.WriteLine("Succeed ingredientMeals seed");
         }
     }
 }

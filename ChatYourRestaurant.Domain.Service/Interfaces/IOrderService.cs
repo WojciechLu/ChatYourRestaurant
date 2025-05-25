@@ -5,5 +5,5 @@ namespace ChatYourRestaurant.Domain.Service.Interfaces;
 
 public interface IOrderService
 {
-    Order MakeOrder(List<MealQuantityDto> mealQuantities);
+    OrderDto MakeOrder(List<MealQuantityDto> mealQuantities);
 }

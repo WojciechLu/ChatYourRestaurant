@@ -1,4 +1,6 @@
-﻿using ChatYourRestaurant.DataAccess.Repositories;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+using ChatYourRestaurant.DataAccess.Repositories;
 using ChatYourRestaurant.Domain.Common.Dtos;
 using ChatYourRestaurant.Domain.Common.Enums;
 using ChatYourRestaurant.Domain.Common.Models;
@@ -8,7 +10,7 @@ namespace ChatYourRestaurant.Domain.Service.Services;
 
 public class OrderService(IOrderRepository orderRepository, IMealRepository mealRepository): IOrderService
 {
-    public Order MakeOrder(List<MealQuantityDto> mealQuantities)
+    public OrderDto MakeOrder(List<MealQuantityDto> mealQuantities)
     {
         var order = new Order
         {
@@ -33,6 +35,7 @@ public class OrderService(IOrderRepository orderRepository, IMealRepository meal
         }).ToList();
         
         order.MealQuantities = newMealQuantities;
-        return orderRepository.MakeOrder(order);
+        var savedOrder = orderRepository.MakeOrder(order);
+        return savedOrder.ToDto();
     }
 }

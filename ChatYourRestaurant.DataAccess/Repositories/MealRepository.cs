@@ -8,6 +8,7 @@ public interface IMealRepository
     List<Meal> GetAll();
     List<Meal> GetByIds(List<int> ids);
     List<Meal> GetMealsByIngredients(IEnumerable<string> ingredients, IEnumerable<string> excludeIngredients);
+    List<Meal> GetMealsByText(IEnumerable<string> meals);
 }
 
 public class MealRepository(RestaurantDbContext context): IMealRepository
@@ -40,5 +41,10 @@ public class MealRepository(RestaurantDbContext context): IMealRepository
                     StringComparison.InvariantCultureIgnoreCase)))).ToList();
         }
         return meals.Take(5).ToList();
+    }
+
+    public List<Meal> GetMealsByText(IEnumerable<string> meals)
+    {
+        return context.Meals.Where(x => meals.Contains(x.Name)).ToList();
     }
 }

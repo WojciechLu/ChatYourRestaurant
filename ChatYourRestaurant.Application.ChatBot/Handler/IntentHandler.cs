@@ -1,14 +1,17 @@
 ﻿using ChatYourRestaurant.DataAccess.Repositories;
+using ChatYourRestaurant.Domain.Service.Interfaces;
 
 namespace ChatYourRestaurant.Application.ChatBot.Handler;
 
 public class IntentHandler
 {
     private readonly IMealRepository _mealRepository;
+    private readonly IOrderService _orderService;
 
-    public IntentHandler(IMealRepository mealRepository)
+    public IntentHandler(IMealRepository mealRepository, IOrderService orderService)
     {
         _mealRepository = mealRepository;
+        _orderService = orderService;
     }
 
     public string ReturnResponseBasedOnConversationIntend(ConversationResult response)
@@ -17,6 +20,7 @@ public class IntentHandler
         {
             "RecommendDish" => GetRecommendation(response.Result.Prediction.Entities.Select(x => x.Text)),
             "NotRecommandDish" => GetNotRecommendation(response.Result.Prediction.Entities.Select(x => x.Text)),
+            "OrderDish" => OrderDish(response.Result.Prediction.Entities.Select(x => x.Text)),
             "None" or "Welcome" => Hello(),
             _ => string.Empty
         };
@@ -33,7 +37,12 @@ public class IntentHandler
         var meals = _mealRepository.GetMealsByIngredients(new List<string>(), enumerable);
         return $"Then, I would recommend for you: {string.Join(", ", meals.Select(x => x.Name))}";
     }
-
+    private string OrderDish(IEnumerable<string> enumerable)
+    {
+        var dishes = _mealRepository.GetMealsByText(enumerable);
+        // _orderService.MakeOrder(dishes.ToDto());
+        return $"Your order has been created. Anything else?";
+    }
     private string Hello()
     {
         return
